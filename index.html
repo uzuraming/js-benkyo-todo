@@ -26,7 +26,7 @@
     </div>
 
     <!-- ここにテンプレートを置く -->
-    <li id="todo-template" style="display: none;"><button class="delete-button">削除</button></li>
+    <li id="todo-template" style="display: none;"><button class="delete-button" onclick="deleteButtonHandler(this)">削除</button></li>
   </body>
 
   <script lang="js">
@@ -44,6 +44,10 @@
       todo.prepend(todoInput)
       todoList.appendChild(todo);
  
+    }
+
+    function deleteButtonHandler (e) {
+      e.parentNode.remove()
     }
 
   </script>
