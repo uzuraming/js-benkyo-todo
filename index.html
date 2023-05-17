@@ -23,7 +23,7 @@
         </ul>
       </div>
       <div class="input-box">
-        <input type="text" placeholder="ここに入力してね"><button onclick="clickSendButtonHandler()">送信</button>
+        <input id="todo-input" type="text" placeholder="ここに入力してね"><button onclick="clickSendButtonHandler()">送信</button>
       </div>
 
     </div>
@@ -32,7 +32,8 @@
   <script lang="js">
 
     function clickSendButtonHandler (){
-      console.log("押されたぜ")
+      const todo = document.getElementById("todo-input").value;
+      console.log(todo)
     }
 
   </script>
