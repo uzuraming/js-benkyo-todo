@@ -1,0 +1,25 @@
+.delete-button{
+  margin-left: 1em;
+}
+
+.wrapper {
+  width: 1000px; 
+  margin:auto;
+  background-color: lightgray;
+}
+
+.title{
+  background-color: gray;
+}
+
+.todo-box {
+  background-color: white;
+  margin: 1em;
+  border: solid black;
+}
+
+.input-box {
+  display: flex;
+  justify-content: end;
+  padding: 1em;
+}
