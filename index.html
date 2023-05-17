@@ -15,11 +15,8 @@
     <div class="wrapper">
       <h2 class="title">TODOだお</h2>
       <div class="todo-box">
-        <ul>
-          <li>タスク1<button class="delete-button">削除</button></li>
-          <li>タスク2<button class="delete-button">削除</button></li>
-          <li>タスク3<button class="delete-button">削除</button></li>
-          <li>タスク4<button class="delete-button">削除</button></li>
+        <ul id="todo-list">
+       
         </ul>
       </div>
       <div class="input-box">
@@ -27,13 +24,23 @@
       </div>
 
     </div>
+
+    <!-- ここにテンプレートを置く -->
+    <li id="todo-template" style="display: none;"><button class="delete-button">削除</button></li>
   </body>
 
   <script lang="js">
 
     function clickSendButtonHandler (){
-      const todo = document.getElementById("todo-input").value;
-      console.log(todo)
+      const todoInput = document.getElementById("todo-input").value;
+      const todoList = document.getElementById("todo-list")
+      const todoTemplate = document.getElementById("todo-template")
+      const todo = todoTemplate.cloneNode(true)
+      todo.style.display = "";
+
+      todo.prepend(todoInput)
+      todoList.appendChild(todo);
+ 
     }
 
   </script>
